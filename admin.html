@@ -18,16 +18,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link href="css/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/admin.css">
 </head>
 <body class="bg-surface-container-low">
 
     <!-- Admin Wrapper -->
-    <div class="admin-wrapper d-flex">
+    <div class="admin-wrapper d-flex flex-column flex-lg-row">
+        
+        <!-- Mobile Header -->
+        <div class="admin-mobile-header d-lg-none">
+            <img src="assets/logo.png" alt="SAKI" style="height: 40px;">
+            <button class="btn p-0 border-0" id="sidebarToggle">
+                <span class="material-symbols-outlined" style="font-size: 32px; color: var(--color-primary);">menu</span>
+            </button>
+        </div>
         
         <!-- Sidebar -->
-        <aside class="admin-sidebar shadow-sm d-flex flex-column p-4">
+        <aside class="admin-sidebar shadow-sm d-flex flex-column p-4" id="adminSidebar">
             <div class="brand-logo mb-5">
                 <img src="assets/logo.png" alt="SAKI" style="height: 90px; width: auto; object-fit: contain;">
             </div>
@@ -309,6 +317,29 @@
               .from('.gsap-header', { y: -20, duration: 0.5, clearProps: "all" }, "-=0.4")
               .from('.gsap-stats > div', { y: 20, opacity: 0, duration: 0.5, stagger: 0.1 }, "-=0.3")
               .from('.gsap-table, .gsap-trending', { y: 20, opacity: 0, duration: 0.6, stagger: 0.2 }, "-=0.2");
+        });
+
+        // Mobile Sidebar Toggle
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const adminSidebar = document.getElementById('adminSidebar');
+        
+        if(sidebarToggle) {
+            sidebarToggle.addEventListener('click', () => {
+                adminSidebar.classList.toggle('active');
+                const icon = sidebarToggle.querySelector('.material-symbols-outlined');
+                icon.textContent = adminSidebar.classList.contains('active') ? 'close' : 'menu';
+            });
+        }
+
+        // Close sidebar when clicking links on mobile
+        document.querySelectorAll('.admin-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if(window.innerWidth < 992) {
+                    adminSidebar.classList.remove('active');
+                    const icon = sidebarToggle.querySelector('.material-symbols-outlined');
+                    icon.textContent = 'menu';
+                }
+            });
         });
     </script>
 </body>
