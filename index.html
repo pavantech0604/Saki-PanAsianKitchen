@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAKI | Pan Asian Kitchen & Rooftop</title>
+    
+    <!-- Favicon & Brand Assets -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <meta name="theme-color" content="#B5121B">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Header -->
+<header id="mainHeader" class="fixed-top w-100 z-3" style="height: 140px; transition: height 0.4s ease;">
+    <div class="d-flex justify-content-between align-items-center h-100 px-margin-edge w-100">
+        <div class="d-flex align-items-center gap-3">
+            <button class="btn p-0 border-0 bg-transparent text-primary d-md-none" id="mobileMenuBtn">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <a href="#home" class="text-decoration-none">
+                <img src="assets/logo.png" alt="SAKI Logo" style="height: 100px; object-fit: contain;" class="brand-logo">
+            </a>
+        </div>
+        <nav class="d-none d-md-flex gap-5 align-items-center">
+            <a href="#home" class="text-on-background text-decoration-none font-label-caps nav-link-custom">Home</a>
+            <a href="#about" class="text-on-background text-decoration-none font-label-caps nav-link-custom">Our Story</a>
+            <a href="#menu" class="text-on-background text-decoration-none font-label-caps nav-link-custom">Menu</a>
+            <a href="#gallery" class="text-on-background text-decoration-none font-label-caps nav-link-custom">Gallery</a>
+            <a href="#reservations" class="text-on-background text-decoration-none font-label-caps nav-link-custom">Contact</a>
+        </nav>
+        <button class="btn-primary-custom font-label-caps px-5 py-3 fw-bold">RESERVE</button>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section id="home" class="position-relative w-100 d-flex align-items-center justify-content-center overflow-hidden bg-background" style="height: 100vh;">
+        <div class="position-absolute w-100 h-100 z-0" style="background: radial-gradient(circle at center, rgba(140, 106, 59, 0.1) 0%, transparent 80%);"></div>
+        <div class="position-relative z-1 text-center px-4 px-md-5 gsap-hero-text" style="margin-top: 60px;">
+            <div class="d-flex align-items-center justify-content-center gap-3 mb-4 opacity-50">
+                <span class="font-label-caps" style="letter-spacing: 0.2em; font-size: 11px;">Rated 4.3★ on Zomato</span>
+                <div class="bg-outline opacity-50" style="width: 1px; height: 12px;"></div>
+                <span class="font-label-caps" style="letter-spacing: 0.2em; font-size: 11px;">Koramangala 4th Block</span>
+            </div>
+            <h1 class="font-display-xl mb-4 mx-auto" style="max-width: 950px;">SAKI - Pan Asian Kitchen</h1>
+            <p class="font-subhead-serif text-on-surface-variant mx-auto mb-5" style="max-width: 750px; font-size: 1.4rem; line-height: 1.5; font-style: italic; opacity: 0.8;">
+                Experience the pinnacle of Pan-Asian fine dining and rooftop alchemy.
+            </p>
+            <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center gap-4">
+                <button class="btn-primary-custom font-label-caps px-5 py-3">EXPLORE THE MENU</button>
+                <button class="btn-outline-custom font-label-caps px-5 py-3">BOOK A TABLE</button>
+            </div>
+        </div>
+        <div class="position-absolute bottom-0 start-50 translate-middle-x mb-5 d-flex flex-column align-items-center gap-2">
+            <span class="font-label-caps text-white" style="font-size: 10px; opacity: 0.4;">SCROLL TO DISCOVER</span>
+            <div style="width: 1px; height: 50px; background: linear-gradient(to bottom, var(--color-primary-container), transparent);"></div>
+        </div>
+    </section>
+
+    <!-- The Art of Ma Section -->
+    <section id="about" class="px-margin-edge bg-surface-container-low overflow-hidden" style="padding-top: 130px; padding-bottom: 60px;">
+        <div class="container-max">
+            <div class="row align-items-center">
+                <!-- Left: Attractive Image -->
+                <div class="col-md-5 position-relative gsap-reveal pe-lg-5">
+                    <div class="position-relative z-1 p-2 bg-surface shadow-xl">
+                        <img class="w-100 object-fit-cover" style="aspect-ratio: 1/1; max-height: 420px;" src="assets/rooftop.jpg" alt="SAKI Rooftop Vibe" />
+                    </div>
+                    <div class="position-absolute border border-outline opacity-20 d-none d-lg-block" style="top: -1.5rem; left: -1.5rem; width: 8rem; height: 8rem;"></div>
+                </div>
+
+                <!-- Right: Content Gap -->
+                <div class="col-md-7 gsap-reveal ps-lg-5 border-start-md border-outline-variant" style="border-width: 1px !important;">
+                    <div class="py-4">
+                        <h2 class="font-label-caps text-primary mb-3 fw-bold" style="letter-spacing: 0.3em; font-size: 12px;">VOTED BEST IN KORAMANGALA</h2>
+                        <h3 class="font-display-xl mb-4 text-dark" style="font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.1;">
+                            <span class="d-block text-secondary opacity-75 font-subhead-serif mb-2" style="font-size: 1.5rem; font-style: italic;">Asian Alchemy:</span>
+                            The Ultimate Fine Dining
+                        </h3>
+                        
+                        <div class="mb-5">
+                            <p class="font-body-lg text-dark mb-4" style="line-height: 1.8; font-size: 1.15rem;">
+                                Recognized by Magicpin and the District app as Bangalore's premier trending Pan-Asian spot. Our rooftop setting in Koramangala 4th Block offers a curated atmosphere for connoisseurs of authentic flavors.
+                            </p>
+                            <p class="font-body-md text-dark opacity-75 mb-0" style="line-height: 1.8; font-style: italic; border-left: 3px solid var(--color-primary); padding-left: 20px;">
+                                "A culinary masterpiece with a view," as highlighted in recent Zomato reviews. From our signature Salmon Steaks to hand-crafted Dim Sums, every plate is an authentic expression of Pan-Asian heritage.
+                            </p>
+                        </div>
+
+                        <a href="#" class="d-inline-flex align-items-center gap-3 text-primary text-decoration-none hover-primary transition-colors fw-bold">
+                            <span class="font-label-caps" style="letter-spacing: 0.2em;">READ THE REVIEWS</span>
+                            <span class="material-symbols-outlined" style="font-size: 20px;">east</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Menu Showcase -->
+    <section id="menu" class="px-margin-edge bg-surface-container-lowest overflow-hidden" style="padding-top: 130px; padding-bottom: 60px;">
+        <div class="px-margin-edge mb-4 d-flex justify-content-between align-items-end gsap-reveal">
+            <div>
+                <h2 class="font-label-caps text-primary mb-3">THE COLLECTION</h2>
+                <h3 class="font-headline-lg m-0">Signature Revelations</h3>
+            </div>
+            <div class="d-none d-md-block">
+                <button class="btn p-0 border-0 border-bottom border-outline rounded-0 text-on-surface-variant font-label-caps pb-2" style="transition: all 0.3s;" onmouseover="this.classList.add('text-primary', 'border-primary')" onmouseout="this.classList.remove('text-primary', 'border-primary')">VIEW FULL MENU</button>
+            </div>
+        </div>
+
+        <!-- Bento Grid -->
+        <div class="px-margin-edge container-max mx-auto">
+            <div class="row g-2">
+                <!-- Large Feature -->
+                <div class="col-12 col-md-6 gsap-reveal">
+                    <div class="bento-image-wrapper" style="height: 400px;">
+                        <img src="assets/salmon_steak.jpg" alt="Salmon Steak with Curry" />
+                        <div class="bento-overlay"></div>
+                        <div class="position-absolute bottom-0 start-0 p-4 p-md-5">
+                            <p class="font-label-caps text-primary mb-2" style="font-size: 10px;">ZOMATO SIGNATURE</p>
+                            <h4 class="font-headline-md text-white mb-2">Salmon Steak with Pan-Asian Curry</h4>
+                            <p class="font-body-md text-white opacity-75 mb-0" style="max-width: 300px;">Juicy salmon steak served in a rich, aromatic, and spicy Pan-Asian curry sauce. A fan-favorite across all platforms.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6 d-flex flex-column gap-2">
+                    <!-- Medium Feature -->
+                    <div class="gsap-reveal" style="height: 196px;">
+                        <div class="bento-image-wrapper">
+                            <img src="assets/sushi_platter.jpg" alt="Signature Sushi Platter" />
+                            <div class="bento-overlay"></div>
+                            <div class="position-absolute bottom-0 start-0 p-4 p-md-5">
+                                <p class="font-label-caps text-primary mb-2" style="font-size: 10px;">MUST TRY</p>
+                                <h4 class="font-headline-md text-white m-0">Signature Sushi Platter</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row g-3 h-50" style="flex: 1;">
+                        <!-- Small Feature 1 -->
+                        <div class="col-6 gsap-reveal">
+                            <div class="bento-image-wrapper">
+                                <img src="assets/steamed_fish.jpg" alt="Thai Steamed Fish" />
+                                <div class="position-absolute inset-0 w-100 h-100" style="background-color: rgba(30,15,14,0.4); transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='rgba(30,15,14,0.2)'" onmouseout="this.style.backgroundColor='rgba(30,15,14,0.4)'"></div>
+                                <div class="position-absolute inset-0 w-100 h-100 d-flex align-items-center justify-content-center pe-none">
+                                    <h4 class="font-label-caps text-white m-0 text-center px-2">THAI STEAMED FISH</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Small Feature 2 -->
+                        <div class="col-6 gsap-reveal">
+                            <div class="bento-image-wrapper">
+                                <img src="assets/chicken_lo_mai_gai.jpg" alt="Chicken Lo Mai Gai" />
+                                <div class="position-absolute inset-0 w-100 h-100" style="background-color: rgba(30,15,14,0.4); transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='rgba(30,15,14,0.2)'" onmouseout="this.style.backgroundColor='rgba(30,15,14,0.4)'"></div>
+                                <div class="position-absolute inset-0 w-100 h-100 d-flex align-items-center justify-content-center pe-none">
+                                    <h4 class="font-label-caps text-white m-0 text-center px-2">CHICKEN LO MAI GAI</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social & Ambience -->
+    <section id="gallery" class="px-margin-edge bg-background overflow-hidden" style="padding-top: 130px; padding-bottom: 60px;">
+        <div class="container-max px-margin-edge">
+            <div class="row align-items-center" style="gap: var(--spacing-section-gap) 0;">
+                <div class="col-lg-6 order-2 order-lg-1 gsap-reveal">
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <img class="w-100 object-fit-cover" style="aspect-ratio: 1/1;" src="assets/date_night.jpg" alt="Date Night Ambience" />
+                        </div>
+                        <div class="col-6 pt-5">
+                            <img class="w-100 object-fit-cover" style="aspect-ratio: 1/1;" src="assets/social_dining.jpg" alt="Social Dining Ambience" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1 order-1 order-lg-2 gsap-reveal">
+                    <h2 class="font-label-caps text-primary mb-3">VENUE BOOKING FAVORITE</h2>
+                    <h3 class="font-headline-lg mb-4 lh-sm">Top Trending on <br/>District & Dineout</h3>
+                    <p class="font-body-lg text-dark mb-4 pb-2">
+                        Get **Flat 20% OFF** via Magicpin vouchers. SAKI is currently the #1 trending rooftop spot in Koramangala 4th Block, perfect for intimate date nights and lively group soirées.
+                    </p>
+                    
+                    <div class="d-flex flex-column gap-4">
+                        <div class="d-flex gap-3 align-items-start">
+                            <span class="material-symbols-outlined text-secondary fs-3">favorite</span>
+                            <div>
+                                <h5 class="font-label-caps text-on-surface mb-1">"BEST FOR DATE NIGHT"</h5>
+                                <p class="font-body-md text-on-surface-variant opacity-75 m-0">Awarded Magicpin's 'Most Romantic Spot' for our intimate lighting and secluded seating.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3 align-items-start">
+                            <span class="material-symbols-outlined text-secondary fs-3">celebration</span>
+                            <div>
+                                <h5 class="font-label-caps text-on-surface mb-1">PREMIUM EXPERIENCES</h5>
+                                <p class="font-body-md text-on-surface-variant opacity-75 m-0">Voted Top 10 on District for exclusive group dining and bespoke chef's menus.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservations CTA -->
+    <section id="reservations" class="px-margin-edge position-relative overflow-hidden bg-surface-container-low" style="padding-top: 130px; padding-bottom: 60px;">
+        <div class="position-absolute inset-0 opacity-10 d-flex align-items-center h-100" style="pointer-events: none;">
+            <div class="scrolling-text font-display-xl text-primary user-select-none" style="font-size: 120px; white-space: nowrap;">
+                SAKI RESERVATIONS — KORAMANGALA — SAKI RESERVATIONS — KORAMANGALA — SAKI RESERVATIONS — KORAMANGALA — SAKI RESERVATIONS — KORAMANGALA
+            </div>
+        </div>
+        
+        <div class="position-relative z-1 container-max px-margin-edge gsap-reveal">
+            <div class="mx-auto border border-outline-variant p-4 p-md-5" style="max-width: 900px; background-color: rgba(30,15,14,0.4); backdrop-filter: blur(20px); border-color: rgba(91,64,61,0.2) !important;">
+                <div class="text-center mb-5">
+                    <h2 class="font-display-xl font-headline-lg mb-3">Secure Your Seat</h2>
+                    <p class="font-body-lg text-on-surface-variant m-0">Reservations are highly recommended for weekend dining.</p>
+                </div>
+                
+                <form class="row g-4 pt-2">
+                    <div class="col-md-6">
+                        <label class="font-label-caps text-on-surface-variant opacity-75 mb-1" style="font-size: 10px;">NAME</label>
+                        <input type="text" class="form-control w-100 form-control-custom" placeholder="Your Full Name" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="font-label-caps text-on-surface-variant opacity-75 mb-1" style="font-size: 10px;">GUESTS</label>
+                        <select class="form-select w-100 form-select-custom pe-4">
+                            <option>2 Guests</option>
+                            <option>4 Guests</option>
+                            <option>6 Guests</option>
+                            <option>Private Dining (10+)</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="font-label-caps text-on-surface-variant opacity-75 mb-1" style="font-size: 10px;">DATE</label>
+                        <input type="date" class="form-control w-100 form-control-custom" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="font-label-caps text-on-surface-variant opacity-75 mb-1" style="font-size: 10px;">TIME</label>
+                        <input type="time" class="form-control w-100 form-control-custom" />
+                    </div>
+                    <div class="col-12 pt-4">
+                        <button type="submit" class="btn-primary-custom w-100 py-3 font-label-caps fs-6">CONFIRM BOOKING</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-100 py-5 px-margin-edge border-top border-outline-variant" style="border-color: rgba(91,64,61,0.2) !important;">
+    <div class="d-flex flex-column align-items-center text-center gap-4 py-4">
+        <h2 class="font-display-xl font-headline-md m-0 tracking-widest text-on-surface d-flex align-items-center justify-content-center gap-3">
+            <img src="assets/logo.png" alt="SAKI Logo" style="height: 120px; object-fit: contain;" class="brand-logo">
+        </h2>
+        <div class="d-flex gap-4">
+            <a href="#" class="text-on-surface-variant text-decoration-none hover-primary font-label-caps transition-colors">PRIVACY</a>
+            <a href="#" class="text-on-surface-variant text-decoration-none hover-primary font-label-caps transition-colors">TERMS</a>
+            <a href="#" class="text-on-surface-variant text-decoration-none hover-primary font-label-caps transition-colors">ACCESSIBILITY</a>
+            <a href="admin.html" class="text-on-surface-variant text-decoration-none hover-primary font-label-caps transition-colors">ADMIN</a>
+        </div>
+        <div class="text-secondary font-body-md opacity-75">
+            750, 10th Main Rd, 80 Feet Rd, 4th Block, Koramangala, Bengaluru, Karnataka 560034
+        </div>
+        <div class="font-body-md text-on-surface-variant opacity-50">
+            © 2024 SAKI PAN ASIAN KITCHEN
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Premium Logo Container */
+.logo-glass-wrapper {
+  background: rgba(252, 250, 247, 0.1); /* Subtle Porcelain White tint */
+  backdrop-filter: blur(10px);
+  padding: 8px 16px;
+  border: 1px solid rgba(252, 250, 247, 0.1);
+  transition: all 0.3s ease;
+}
+.logo-glass-wrapper:hover {
+  background: rgba(252, 250, 247, 0.15);
+  border-color: var(--color-primary);
+}
+
+/* Brand Logo Styling */
+.brand-logo {
+  /* Removing heavy glow, using clean subtle shadow for depth */
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  transition: all 0.5s ease;
+}
+
+/* Enhanced Navbar Interactivity */
+.nav-link-custom {
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 5px 0;
+  font-weight: 600 !important;
+  color: var(--color-on-background) !important;
+}
+.nav-link-custom:hover {
+  color: var(--color-primary) !important;
+}
+
+/* Hero Content Readability */
+.gsap-hero-text {
+  z-index: 2;
+}
+.gsap-hero-text h1 {
+  color: var(--color-on-background) !important;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+.gsap-hero-text p {
+  color: var(--color-on-surface-variant) !important;
+  font-weight: 400;
+}
+</style>
+
+<!-- BottomNavBar for Mobile -->
+<nav class="d-md-none fixed-bottom w-100 z-3 bg-surface-container border-top border-outline-variant d-flex justify-content-around align-items-center pb-2" style="height: 80px; box-shadow: 0 -4px 24px rgba(0,0,0,0.15); border-color: rgba(91,64,61,0.3) !important;">
+    <a href="#" class="mobile-nav-link active pt-2 w-25 text-center">
+        <span class="material-symbols-outlined mb-1">home</span>
+        <span class="font-label-caps" style="font-size: 10px;">Home</span>
+    </a>
+    <a href="#" class="mobile-nav-link pt-2 w-25 text-center">
+        <span class="material-symbols-outlined mb-1">restaurant_menu</span>
+        <span class="font-label-caps" style="font-size: 10px;">Menu</span>
+    </a>
+    <a href="#" class="mobile-nav-link pt-2 w-25 text-center">
+        <span class="material-symbols-outlined mb-1">gallery_thumbnail</span>
+        <span class="font-label-caps" style="font-size: 10px;">Gallery</span>
+    </a>
+    <a href="#" class="mobile-nav-link pt-2 w-25 text-center">
+        <span class="material-symbols-outlined mb-1">near_me</span>
+        <span class="font-label-caps" style="font-size: 10px;">Contact</span>
+    </a>
+</nav>
+
+<!-- The Seal -->
+<div class="position-fixed bottom-0 end-0 mb-5 me-4 z-3 d-none d-md-block">
+    <a href="#" class="brand-seal position-relative">
+        <span class="font-display-xl" style="font-size: 24px; line-height: 1; transform: translateY(-2px);">咲</span>
+        <div class="seal-tooltip font-label-caps" style="font-size: 10px;">RESERVE NOW</div>
+    </a>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
